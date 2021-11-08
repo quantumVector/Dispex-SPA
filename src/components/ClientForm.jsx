@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
 import 'antd/dist/antd.css';
 import { Form, Input, Button } from 'antd';
@@ -20,6 +21,24 @@ const tailLayout = {
 
 const ClientForm = () => {
   const [form] = Form.useForm();
+  const [fields, setFields] = React.useState([
+    {
+      name: ['bindId'],
+      value: 'Ant Design',
+    },
+  ]);
+  const selectedStreet = useSelector(({ addresses }) => addresses.selectedStreet);
+  const selectedHouse = useSelector(({ addresses }) => addresses.selectedHouse);
+  const selectedFlat = useSelector(({ addresses }) => addresses.selectedFlat);
+
+  React.useEffect(() => {
+    if (selectedFlat) setFields([
+      {
+        name: ['bindId'],
+        value: selectedFlat,
+      },
+    ]);
+  }, [selectedFlat]);
 
   const onReset = () => {
     form.resetFields();
@@ -30,7 +49,14 @@ const ClientForm = () => {
   };
 
   return (
-    <Form {...layout} form={form} onFinish={onFinish}>
+    <Form {...layout} form={form} onFinish={onFinish} fields={fields}>
+      <div>ул. {selectedStreet}, {selectedHouse}, {selectedFlat}</div>
+      <Form.Item
+        name="bindId"
+        style={{ display: 'none' }}
+      >
+        <Input />
+      </Form.Item>
       <Form.Item
         name="phone"
         label="Телефон"
@@ -43,23 +69,23 @@ const ClientForm = () => {
         <Input />
       </Form.Item>
       <Form.Item
-        name="mail"
+        name="email"
         label="e-mail"
       >
         <Input />
       </Form.Item>
       <Form.Item
-        name="fullName"
+        name="name"
         label="ФИО"
       >
         <Input />
       </Form.Item>
       <Form.Item {...tailLayout}>
-        <Button type="primary" htmlType="submit">
-          Submit
-        </Button>
         <Button htmlType="button" onClick={onReset}>
-          Reset
+          Отмена
+        </Button>
+        <Button type="primary" htmlType="submit">
+          Добавить
         </Button>
       </Form.Item>
     </Form>

@@ -2,6 +2,9 @@ const initialState = {
   streets: [],
   houses: [],
   flats: [],
+  selectedStreet: '',
+  selectedHouse: '',
+  selectedFlat: '',
 };
 
 const addresses = (state = initialState, action) => {
@@ -22,6 +25,27 @@ const addresses = (state = initialState, action) => {
       return {
         ...state,
         flats: action.payload,
+      };
+
+    case 'SELECT_STREET':
+      const street = state.streets.find(item => item.id === action.id);
+      return {
+        ...state,
+        selectedStreet: street.name,
+      };
+
+    case 'SELECT_HOUSE':
+      const house = state.houses.find(item => item.id === action.id);
+      return {
+        ...state,
+        selectedHouse: house.name,
+      };
+
+    case 'SELECT_FLAT':
+      const flat = state.flats.find(item => item.id === action.id);
+      return {
+        ...state,
+        selectedFlat: flat.name,
       };
 
     default:

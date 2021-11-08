@@ -1,1 +1,1 @@
-export { default as Streets } from './Streets';
+export { default as Address } from './Address';

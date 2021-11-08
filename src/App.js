@@ -1,10 +1,10 @@
 import './App.css';
-import { Streets } from './components';
+import { Address } from './components';
 
 function App() {
   return (
     <div className="wrapper">
-      <Streets />
+      <Address />
     </div>
   );
 }

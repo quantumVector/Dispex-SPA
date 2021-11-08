@@ -10,7 +10,6 @@ const instance = axios.create({
 export const getStreets  = () => (dispatch) => {
   instance.get('/Request/streets')
     .then(response => {
-      console.log(response)
       dispatch(setStreets(response.data));
     });
 };

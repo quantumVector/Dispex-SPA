@@ -1,5 +1,5 @@
 const initialState = {
-  items: [],
+  streets: [],
 };
 
 const addresses = (state = initialState, action) => {
@@ -7,7 +7,7 @@ const addresses = (state = initialState, action) => {
     case 'SET_STREETS':
       return {
         ...state,
-        items: action.payload,
+        streets: action.payload,
       };
 
     default:

@@ -18,7 +18,7 @@ const tailLayout = {
   },
 };
 
-const TenantForm = () => {
+const ClientForm = () => {
   const [form] = Form.useForm();
 
   const onReset = () => {
@@ -66,4 +66,4 @@ const TenantForm = () => {
   )
 }
 
-export default TenantForm;
+export default ClientForm;

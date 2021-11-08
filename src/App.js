@@ -1,11 +1,11 @@
 import './App.css';
-import { Address, TenantForm } from './components';
+import { Address, ClientForm } from './components';
 
 function App() {
   return (
     <div className="wrapper">
       <Address />
-      <TenantForm />
+      <ClientForm />
     </div>
   );
 }

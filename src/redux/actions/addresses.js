@@ -18,3 +18,15 @@ export const setStreets = (items) => ({
   type: 'SET_STREETS',
   payload: items,
 });
+
+export const getHouses  = (id) => (dispatch) => {
+  instance.get(`/Request/houses/${id}`)
+    .then(response => {
+      dispatch(setHouses(response.data));
+    });
+};
+
+export const setHouses = (items) => ({
+  type: 'SET_HOUSES',
+  payload: items,
+});

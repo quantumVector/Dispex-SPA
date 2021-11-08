@@ -30,3 +30,15 @@ export const setHouses = (items) => ({
   type: 'SET_HOUSES',
   payload: items,
 });
+
+export const getFlats  = (id) => (dispatch) => {
+  instance.get(`/Request/house_flats/${id}`)
+    .then(response => {
+      dispatch(setFlats(response.data));
+    });
+};
+
+export const setFlats = (items) => ({
+  type: 'SET_FLATS',
+  payload: items,
+});

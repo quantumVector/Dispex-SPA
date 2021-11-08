@@ -1,10 +1,11 @@
 import './App.css';
-import { Address } from './components';
+import { Address, TenantForm } from './components';
 
 function App() {
   return (
     <div className="wrapper">
       <Address />
+      <TenantForm />
     </div>
   );
 }

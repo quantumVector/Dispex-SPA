@@ -10,7 +10,7 @@ import mailIcon from '../assets/mail.png';
 import deleteIcon from '../assets/delete.png';
 import editIcon from '../assets/edit.png';
 
-const ResidentItem = ({ id, bindId, name, phone, email, onDeleteClient }) => {
+const Client = ({ id, bindId, name, phone, email, onDeleteClient }) => {
   const dispatch = useDispatch();
   const [editModStatus, setEditModStatus] = React.useState(false);
   const editMod = useSelector(({ housingStock }) => housingStock.editMod);
@@ -56,4 +56,4 @@ const ResidentItem = ({ id, bindId, name, phone, email, onDeleteClient }) => {
   )
 }
 
-export default ResidentItem;
+export default Client;

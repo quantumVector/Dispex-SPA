@@ -13,10 +13,16 @@ const Address = () => {
   const streets = useSelector(({ addresses }) => addresses.streets);
   const houses = useSelector(({ addresses }) => addresses.houses);
   const flats = useSelector(({ addresses }) => addresses.flats);
+  const selectedFlatId = useSelector(({ addresses }) => addresses.selectedFlatId);
+  /* const [addressId, setAddressId] = React.useState(0); */
 
   React.useEffect(() => {
     dispatch(getStreets());
   }, []);
+
+  React.useEffect(() => {
+    if (selectedFlatId) dispatch(getClients(selectedFlatId));
+  }, [selectedFlatId]);
 
   return (
     <div>
@@ -39,7 +45,6 @@ const Address = () => {
         </Select>
 
         <Select defaultValue="Кв./офис" style={{ width: 180 }} onChange={(value) => {
-          dispatch(getClients());
           dispatch(selectFlat(value));
         }}>
           {flats.map((item) => item.typeName === 'Квартира'

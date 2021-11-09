@@ -5,6 +5,7 @@ const initialState = {
   selectedStreet: '',
   selectedHouse: '',
   selectedFlat: '',
+  selectedFlatId: '',
 };
 
 const addresses = (state = initialState, action) => {
@@ -46,6 +47,7 @@ const addresses = (state = initialState, action) => {
       return {
         ...state,
         selectedFlat: flat.name,
+        selectedFlatId: flat.id,
       };
 
     default:

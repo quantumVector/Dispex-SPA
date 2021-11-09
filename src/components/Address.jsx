@@ -26,7 +26,7 @@ const Address = () => {
   }, [selectedFlatId]);
 
   return (
-    <div>
+    <div className={classes.address}>
       <div className={classes.title}>
         <img className={classes.necessarilyIcon} src={necessarilyIcon} alt="necessarily" />
         <div>Адрес</div>

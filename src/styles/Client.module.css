@@ -4,6 +4,11 @@
   border-radius: 6px;
 }
 
+.editable {
+  background-color: #a0ebbf;
+  border: 1px solid #2ECC71;
+}
+
 .infoWrap {
   padding: 20px;
   display: flex;
@@ -60,4 +65,12 @@
 
 .btnIcon {
   width: 30px;
+}
+
+.active, .active:hover {
+  background-color: #5dafe6;
+}
+
+.disable {
+  pointer-events: none;
 }

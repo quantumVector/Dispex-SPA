@@ -21,10 +21,12 @@ const HousingStock = () => {
 
   return (
     <>
-      <div className={classes.address}>ул. {selectedStreet}, {selectedHouse}, {selectedFlat}</div>
+      {clients.length > 0 &&
+        <div className={classes.address}>ул. {selectedStreet}, {selectedHouse}, {selectedFlat}</div>}
       <div className={classes.stock}>
         {clients &&
-          clients.map(item => <Client id={item.bindId}
+          clients.map(item => <Client id={item.id}
+            bindId={item.bindId}
             name={item.name}
             phone={item.phone}
             email={item.email}

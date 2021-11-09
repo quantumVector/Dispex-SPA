@@ -1,6 +1,8 @@
 
 const initialState = {
   clients: [],
+  editMod: false,
+  editableClient: '',
 };
 
 const housingStock = (state = initialState, action) => {
@@ -20,6 +22,20 @@ const housingStock = (state = initialState, action) => {
       return {
         ...state,
         clients: cloneClients,
+      };
+
+    case 'ENABLE_EDIT_MOD':
+      return {
+        ...state,
+        editMod: true,
+        editableClient: action.item,
+      };
+
+    case 'DISABLE_EDIT_MOD':
+      return {
+        ...state,
+        editMod: false,
+        editableClient: '',
       };
 
     default:

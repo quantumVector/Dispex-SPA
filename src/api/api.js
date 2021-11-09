@@ -61,4 +61,11 @@ export const getClients = (addressId) => (dispatch) => {
     });
 };
 
+export const deleteClient = (id) => (dispatch) => {
+  console.log(id)
+  instance.delete(`/HousingStock/bind_client/${id}`)
+    .then(response => {
+      console.log(response)
+    });
+};
 

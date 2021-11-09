@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/quantumVector/Dispex-SPA/static/css/main.ec3c58cd.chunk.css",
-    "main.js": "/quantumVector/Dispex-SPA/static/js/main.0a303af8.chunk.js",
-    "main.js.map": "/quantumVector/Dispex-SPA/static/js/main.0a303af8.chunk.js.map",
-    "runtime-main.js": "/quantumVector/Dispex-SPA/static/js/runtime-main.588c7afe.js",
-    "runtime-main.js.map": "/quantumVector/Dispex-SPA/static/js/runtime-main.588c7afe.js.map",
-    "static/css/2.a95be28f.chunk.css": "/quantumVector/Dispex-SPA/static/css/2.a95be28f.chunk.css",
-    "static/js/2.139dd8d7.chunk.js": "/quantumVector/Dispex-SPA/static/js/2.139dd8d7.chunk.js",
-    "static/js/2.139dd8d7.chunk.js.map": "/quantumVector/Dispex-SPA/static/js/2.139dd8d7.chunk.js.map",
-    "index.html": "/quantumVector/Dispex-SPA/index.html",
-    "static/css/2.a95be28f.chunk.css.map": "/quantumVector/Dispex-SPA/static/css/2.a95be28f.chunk.css.map",
-    "static/css/main.ec3c58cd.chunk.css.map": "/quantumVector/Dispex-SPA/static/css/main.ec3c58cd.chunk.css.map",
-    "static/js/2.139dd8d7.chunk.js.LICENSE.txt": "/quantumVector/Dispex-SPA/static/js/2.139dd8d7.chunk.js.LICENSE.txt",
-    "static/media/user.bcc74561.png": "/quantumVector/Dispex-SPA/static/media/user.bcc74561.png"
+    "main.css": "/Dispex-SPA/static/css/main.ec3c58cd.chunk.css",
+    "main.js": "/Dispex-SPA/static/js/main.0a303af8.chunk.js",
+    "main.js.map": "/Dispex-SPA/static/js/main.0a303af8.chunk.js.map",
+    "runtime-main.js": "/Dispex-SPA/static/js/runtime-main.1ef1520e.js",
+    "runtime-main.js.map": "/Dispex-SPA/static/js/runtime-main.1ef1520e.js.map",
+    "static/css/2.a95be28f.chunk.css": "/Dispex-SPA/static/css/2.a95be28f.chunk.css",
+    "static/js/2.2422a5c5.chunk.js": "/Dispex-SPA/static/js/2.2422a5c5.chunk.js",
+    "static/js/2.2422a5c5.chunk.js.map": "/Dispex-SPA/static/js/2.2422a5c5.chunk.js.map",
+    "index.html": "/Dispex-SPA/index.html",
+    "static/css/2.a95be28f.chunk.css.map": "/Dispex-SPA/static/css/2.a95be28f.chunk.css.map",
+    "static/css/main.ec3c58cd.chunk.css.map": "/Dispex-SPA/static/css/main.ec3c58cd.chunk.css.map",
+    "static/js/2.2422a5c5.chunk.js.LICENSE.txt": "/Dispex-SPA/static/js/2.2422a5c5.chunk.js.LICENSE.txt",
+    "static/media/user.bcc74561.png": "/Dispex-SPA/static/media/user.bcc74561.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.588c7afe.js",
+    "static/js/runtime-main.1ef1520e.js",
     "static/css/2.a95be28f.chunk.css",
-    "static/js/2.139dd8d7.chunk.js",
+    "static/js/2.2422a5c5.chunk.js",
     "static/css/main.ec3c58cd.chunk.css",
     "static/js/main.0a303af8.chunk.js"
   ]

@@ -11,26 +11,11 @@ const ClientForm = () => {
   const dispatch = useDispatch();
   const [form] = Form.useForm();
   const [fields, setFields] = React.useState([
-    {
-      name: ['id'],
-      value: 0,
-    },
-    {
-      name: ['bindId'],
-      value: 0,
-    },
-    {
-      name: ['phone'],
-      value: null,
-    },
-    {
-      name: ['email'],
-      value: null,
-    },
-    {
-      name: ['name'],
-      value: null,
-    },
+    { name: ['id'], value: 0 },
+    { name: ['bindId'], value: 0 },
+    { name: ['phone'], value: null },
+    { name: ['email'], value: null },
+    { name: ['name'], value: null },
   ]);
   const selectedStreet = useSelector(({ addresses }) => addresses.selectedStreet);
   const selectedHouse = useSelector(({ addresses }) => addresses.selectedHouse);
@@ -41,32 +26,17 @@ const ClientForm = () => {
 
   React.useEffect(() => {
     if (selectedFlatId) setFields([
-      {
-        name: ['id'],
-        value: 0,
-      },
-      {
-        name: ['bindId'],
-        value: selectedFlatId,
-      },
+      { name: ['id'], value: 0 },
+      { name: ['bindId'], value: selectedFlatId },
     ]);
   }, [selectedFlatId]);
 
   React.useEffect(() => {
     if (editMod) {
       setFields([
-        {
-          name: ['phone'],
-          value: editableClient.phone,
-        },
-        {
-          name: ['email'],
-          value: editableClient.email,
-        },
-        {
-          name: ['name'],
-          value: editableClient.name,
-        },
+        { name: ['phone'], value: editableClient.phone },
+        { name: ['email'], value: editableClient.email },
+        { name: ['name'], value: editableClient.name },
       ]);
 
       dispatch(deleteClient(editableClient.bindId));
@@ -76,26 +46,11 @@ const ClientForm = () => {
   const onReset = () => {
     form.resetFields();
     setFields([
-      {
-        name: ['id'],
-        value: 0,
-      },
-      {
-        name: ['bindId'],
-        value: selectedFlatId,
-      },
-      {
-        name: ['phone'],
-        value: null,
-      },
-      {
-        name: ['email'],
-        value: null,
-      },
-      {
-        name: ['name'],
-        value: null,
-      },
+      { name: ['id'], value: 0 },
+      { name: ['bindId'], value: selectedFlatId },
+      { name: ['phone'], value: null },
+      { name: ['email'], value: null },
+      { name: ['name'], value: null },
     ])
     dispatch(disableEditMod());
   };
@@ -108,6 +63,7 @@ const ClientForm = () => {
   return (
     <div className={classes.form}>
       <Form form={form} onFinish={onFinish} fields={fields}>
+
         {selectedStreet &&
           <div className={classes.address}>ул. {selectedStreet}, {selectedHouse}, {selectedFlat}</div>}
 

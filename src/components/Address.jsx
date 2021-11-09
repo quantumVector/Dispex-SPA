@@ -2,6 +2,8 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getFlats, getHouses, getStreets, getClients } from '../api/api';
 import { selectFlat, selectHouse, selectStreet } from '../redux/actions/addresses';
+import classes from '../styles/Address.module.css';
+import necessarilyIcon from '../assets/necessarily.png';
 
 import 'antd/dist/antd.css';
 import { Select } from 'antd';
@@ -25,7 +27,10 @@ const Address = () => {
 
   return (
     <div>
-      <div>Адрес</div>
+      <div className={classes.title}>
+        <img className={classes.necessarilyIcon} src={necessarilyIcon} alt="necessarily" />
+        <div>Адрес</div>
+      </div>
       <div>
         <Select defaultValue="Улица" style={{ width: 300 }} onChange={(value) => {
           dispatch(getHouses(value));
@@ -43,7 +48,7 @@ const Address = () => {
           {houses.map((item) => <Option value={item.id} key={item.id}>{item.name}</Option>)}
         </Select>
 
-        <Select defaultValue="Кв./офис" style={{ width: 180 }} onChange={(value) => {
+        <Select defaultValue="Кв./офис" style={{ width: 150 }} onChange={(value) => {
           dispatch(selectFlat(value));
         }}>
           {flats.map((item) => item.typeName === 'Квартира'

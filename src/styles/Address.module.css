@@ -1,0 +1,13 @@
+.title {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.necessarilyIcon {
+  width: 15px;
+  margin-right: 5px;
+}

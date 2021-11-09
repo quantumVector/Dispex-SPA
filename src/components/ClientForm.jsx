@@ -1,24 +1,10 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import classes from '../styles/ClientForm.module.css';
 
 import 'antd/dist/antd.css';
 import { Form, Input, Button } from 'antd';
 import { addClient } from '../api/api';
-
-const layout = {
-  labelCol: {
-    span: 8,
-  },
-  wrapperCol: {
-    span: 10,
-  },
-};
-const tailLayout = {
-  wrapperCol: {
-    offset: 1,
-    span: 16,
-  },
-};
 
 const ClientForm = () => {
   const dispatch = useDispatch();
@@ -42,7 +28,7 @@ const ClientForm = () => {
     if (selectedFlatId) setFields([
       {
         name: ['id'],
-        value: Math.round((selectedFlatId + Math.round(Math.random() * 1000))/10),
+        value: Math.round((selectedFlatId + Math.round(Math.random() * 1000)) / 10),
       },
       {
         name: ['bindId'],
@@ -60,35 +46,39 @@ const ClientForm = () => {
   };
 
   return (
-    <Form {...layout} form={form} onFinish={onFinish} fields={fields}>
+    <div className={classes.form}>
+      <Form form={form} onFinish={onFinish} fields={fields}>
 
-      <div>ул. {selectedStreet}, {selectedHouse}, {selectedFlat}</div>
+        <div className={classes.address}>ул. {selectedStreet}, {selectedHouse}, {selectedFlat}</div>
 
-      <Form.Item name="id" style={{ display: 'none' }}>
-        <Input />
-      </Form.Item>
+        <Form.Item name="id" style={{ display: 'none' }}>
+          <Input />
+        </Form.Item>
 
-      <Form.Item name="bindId" style={{ display: 'none' }}>
-        <Input />
-      </Form.Item>
+        <Form.Item name="bindId" style={{ display: 'none' }}>
+          <Input />
+        </Form.Item>
 
-      <Form.Item name="phone" label="Телефон" rules={[{ required: true }]}>
-        <Input />
-      </Form.Item>
+        <div className={classes.topFieldsWrap}>
+          <Form.Item name="phone" label="Телефон" rules={[{ required: true }]} style={{marginRight: '5px'}}>
+            <Input />
+          </Form.Item>
 
-      <Form.Item name="email" label="e-mail">
-        <Input />
-      </Form.Item>
+          <Form.Item name="email" label="e-mail" >
+            <Input />
+          </Form.Item>
+        </div>
 
-      <Form.Item name="name" label="ФИО">
-        <Input />
-      </Form.Item>
+        <Form.Item name="name" label="ФИО" style={{marginLeft: '10px'}}>
+          <Input />
+        </Form.Item>
 
-      <Form.Item {...tailLayout}>
-        <Button htmlType="button" onClick={onReset}>Отмена</Button>
-        <Button type="primary" htmlType="submit">Добавить</Button>
-      </Form.Item>
-    </Form>
+        <Form.Item>
+          <Button htmlType="button" onClick={onReset} style={{marginRight: '5px'}}>Отмена</Button>
+          <Button type="primary" htmlType="submit">Добавить</Button>
+        </Form.Item>
+      </Form>
+    </div>
   )
 }
 

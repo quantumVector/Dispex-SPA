@@ -1,0 +1,15 @@
+.form {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.address {
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.topFieldsWrap {
+  display: flex;
+}

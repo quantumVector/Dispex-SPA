@@ -1,0 +1,13 @@
+.address {
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.stock {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 650px;
+}

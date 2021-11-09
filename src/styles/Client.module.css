@@ -1,0 +1,63 @@
+.clientItem {
+  margin: 10px;
+  border: 1px solid rgb(206, 206, 206);
+  border-radius: 6px;
+}
+
+.infoWrap {
+  padding: 20px;
+  display: flex;
+}
+
+.info {
+  margin-left: 10px;
+}
+
+.name {
+  font-weight: 500;
+}
+
+.phoneWrap, .mailWrap {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: #2ECC71;
+}
+
+.mailWrap {
+  color: rgb(185, 185, 185);
+}
+
+.phoneIcon, .mailIcon {
+  width: 15px;
+  height: 15px;
+  display: flex;
+  margin-right: 5px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.btnWrap {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(245, 245, 245);
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(231, 231, 231);
+}
+
+.btnIcon {
+  width: 30px;
+}

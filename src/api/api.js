@@ -41,11 +41,7 @@ export const addClient = ({ id, phone, email, name, bindId }) => (dispatch) => {
 
 export const bindClient = (addressId, clientId) => (dispatch) => {
   console.log({ addressId, clientId })
-  instance.put('/HousingStock/bind_client', { addressId, clientId }, {
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  })
+  instance.put('/HousingStock/bind_client', { addressId, clientId })
     .then(response => {
       console.log(response)
       dispatch(getClients(addressId))

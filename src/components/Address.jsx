@@ -14,7 +14,6 @@ const Address = () => {
   const houses = useSelector(({ addresses }) => addresses.houses);
   const flats = useSelector(({ addresses }) => addresses.flats);
   const selectedFlatId = useSelector(({ addresses }) => addresses.selectedFlatId);
-  /* const [addressId, setAddressId] = React.useState(0); */
 
   React.useEffect(() => {
     dispatch(getStreets());
